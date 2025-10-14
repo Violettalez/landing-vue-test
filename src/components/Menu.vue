@@ -70,7 +70,7 @@ function selectLang(lang) {
       </div>
 
       <button
-        class="uppercase py-[13px] px-[24px] rounded-[60px] bg-violet text-white font-museo text-sm"
+        class="py-[13px] px-[24px] button text-sm"
       >
         Sign in for free
       </button>

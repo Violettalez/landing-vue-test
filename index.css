@@ -15,6 +15,7 @@
 }
 @theme {
   --font-museo: 'Museo Sans Cyrl', sans-serif;
+  --color-violet-bg: #6248ff;
   --color-violet: #4f62f6;
   --color-violet-light: #7181fc;
   --color-violet-dark: #354bf4;
@@ -24,5 +25,5 @@
   --color-gray-dark: #828282;
 }
 @utility button {
-  @apply uppercase py-[20px] px-[64px] rounded-[60px] bg-[--color-violet] text-[--color-white] font-museo text-base transition hover:bg-violet-light active:bg-violet-dark disabled:cursor-not-allowed disabled:bg-gray-light disabled:text-gray-dark;
+  @apply uppercase py-[20px] px-[64px] rounded-[60px] bg-[var(--color-violet)] text-[var(--color-white)] font-museo text-base transition hover:bg-[var(--color-violet-light)] active:bg-[var(--color-violet-dark)] disabled:cursor-not-allowed disabled:bg-[var(--color-gray-light)] disabled:text-[var(--color-gray-dark)];
 }
