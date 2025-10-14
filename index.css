@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
   font-family: 'Museo Sans Cyrl';
   src: url('/src/assets/fonts/Museo\ Sans\ Cyrl\ 500.ttf') format('opentype');
@@ -14,6 +15,7 @@
   font-display: swap;
 }
 @theme {
+  --font-montserrat: 'Montserrat', sans-serif;
   --font-museo: 'Museo Sans Cyrl', sans-serif;
   --color-violet-bg: #6248ff;
   --color-violet: #4f62f6;
@@ -23,6 +25,7 @@
   --color-gray: #333333;
   --color-gray-light: #e0e0e0;
   --color-gray-dark: #828282;
+  --color-gray-text: #4f4f4f;
 }
 @utility button {
   @apply uppercase py-[20px] px-[64px] rounded-[60px] bg-[var(--color-violet)] text-[var(--color-white)] font-museo text-base transition hover:bg-[var(--color-violet-light)] active:bg-[var(--color-violet-dark)] disabled:cursor-not-allowed disabled:bg-[var(--color-gray-light)] disabled:text-[var(--color-gray-dark)];
