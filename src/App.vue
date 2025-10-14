@@ -1,11 +1,14 @@
-<script setup></script>
+<script>
+import Menu from './components/Menu.vue'
+export default {
+  components: {
+    Menu,
+  },
+}
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p class="text-lg text-red-500">
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <Menu/>
 </template>
 
 <style scoped></style>
