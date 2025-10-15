@@ -4,6 +4,7 @@ import Intro from './components/Intro.vue'
 import GettingStarted from './components/GettingStarted.vue'
 import FAQ from './components/FAQ.vue'
 import ContactUs from './components/ContactUs.vue'
+import Footer from './components/Footer.vue'
 export default {
   components: {
     Menu,
@@ -11,6 +12,7 @@ export default {
     GettingStarted,
     FAQ,
     ContactUs,
+    Footer,
   },
 }
 </script>
@@ -21,6 +23,7 @@ export default {
   <GettingStarted />
   <FAQ />
   <ContactUs />
+  <Footer />
 </template>
 
 <style scoped></style>
