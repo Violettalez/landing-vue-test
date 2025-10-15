@@ -2,10 +2,8 @@
 <template>
   <footer class="py-8 px-30">
     <div class="flex justify-between items-start mb-12">
-      <div class="mr-40">
-        <h3 class="cursor-pointer font-museo font-bold text-[15px] text-gray">LOGO</h3>
-      </div>
-      <div class="flex flex-col gap-4 mr-[30px]">
+      <h3 class="cursor-pointer font-museo font-bold text-[15px] text-gray mr-40 flex-1">LOGO</h3>
+      <div class="flex flex-col gap-4 mr-[30px] flex-3">
         <h3 class="font-museo font-medium text-lg leading-[30px] text-gray">
           Information and high risk warning:
         </h3>
@@ -17,7 +15,7 @@
           tolerance.
         </p>
       </div>
-      <div class="flex flex-col gap-4 mr-[96px]">
+      <div class="flex flex-col gap-4 mr-[96px] flex-3">
         <h3 class="font-museo font-medium text-lg leading-[30px] text-gray">Legal disclaimer:</h3>
         <p class="font-montserrat font-normal text-base leading-[27px] text-gray-text">
           Forex trading entails significant risks and is not appropriate for all investors. The
@@ -27,7 +25,9 @@
           operating under brand and using domenLink domain within the European Economic Area.
         </p>
       </div>
-      <ul class="flex flex-col gap-6 *:font-museo *:font-bold *:text-[15px] *:text-gray leading-4">
+      <ul
+        class="flex flex-col gap-6 *:font-museo *:font-bold *:text-[15px] *:text-gray leading-4 flex-1"
+      >
         <li><a href="#">About us</a></li>
         <li><a href="#">Instractions</a></li>
         <li><a href="#">Platforms</a></li>
