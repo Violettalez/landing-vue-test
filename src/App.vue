@@ -5,6 +5,7 @@ import GettingStarted from './components/GettingStarted.vue'
 import FAQ from './components/FAQ.vue'
 import ContactUs from './components/ContactUs.vue'
 import Footer from './components/Footer.vue'
+import PeopleLoveBigInvest from './components/PeopleLoveBigInvest.vue'
 export default {
   components: {
     Menu,
@@ -13,6 +14,7 @@ export default {
     FAQ,
     ContactUs,
     Footer,
+    PeopleLoveBigInvest,
   },
 }
 </script>
@@ -21,6 +23,7 @@ export default {
   <Menu />
   <Intro />
   <GettingStarted />
+  <PeopleLoveBigInvest />
   <FAQ />
   <ContactUs />
   <Footer />
