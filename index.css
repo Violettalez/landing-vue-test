@@ -27,6 +27,7 @@
   --color-gray-dark: #828282;
   --color-gray-text: #4f4f4f;
   --color-error: #eb5757;
+  --color-ok: #0eac00;
 }
 @utility button {
   @apply inline-block w-auto uppercase py-[20px] px-[64px] rounded-[60px] bg-[var(--color-violet)] text-[var(--color-white)] font-museo text-base transition hover:bg-[var(--color-violet-light)] active:bg-[var(--color-violet-dark)] disabled:cursor-not-allowed disabled:bg-[var(--color-gray-light)] disabled:text-[var(--color-gray-dark)];
