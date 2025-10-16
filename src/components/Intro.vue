@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <div class="bg-violet-bg/10 py-25 px-30 flex justify-between items-center gap-[133px]">
+  <div class="bg-violet-bg/10 py-25 px-30 flex desktop:flex-row flex-col justify-between items-center gap-[133px]">
     <div>
       <h1 class="font-museo text-[64px] font-medium mb-8 leading-[72px]">
         Trade everywhere. Invest here!

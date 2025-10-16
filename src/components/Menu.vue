@@ -16,11 +16,17 @@ function selectLang(lang) {
 </script>
 
 <template>
-  <nav class="flex justify-between items-center py-5 px-15">
-    <div class="flex gap-14.25 items-center ml-15">
-      <h1 class="cursor-pointer font-museo font-bold text-[15px] text-gray">LOGO</h1>
+  <nav
+    class="flex justify-between items-center desktop:py-5 tablet:py-5 tablet:px-10 desktop:px-15 mobile:px-5 mobile:py-[30px]"
+  >
+    <div class="flex gap-14.25 items-center desktop:ml-15">
+      <h1
+        class="desktop:block tablet:hidden mobile:block cursor-pointer font-museo font-bold text-[15px] text-gray"
+      >
+        LOGO
+      </h1>
       <ul
-        class="flex items-center gap-4 justify-between *:font-museo *:font-medium *:text-[15px] *:text-gray"
+        class="desktop:flex hidden items-center gap-4 justify-between *:font-museo *:font-medium *:text-[15px] *:text-gray"
       >
         <li><a href="#">How it works</a></li>
         <li><a href="#">About</a></li>
@@ -31,8 +37,10 @@ function selectLang(lang) {
       </ul>
     </div>
 
-    <div class="flex items-center gap-5">
-      <div class="relative">
+    <div
+      class="flex items-center desktop:gap-5 gap-12 desktop:justify-start justify-end desktop:w-auto w-full"
+    >
+      <div class="relative desktop:block hidden">
         <button
           @click="toggleLangSelection"
           class="font-museo font-medium text-[15px] flex items-center gap-1 text-gray border border-black rounded-[60px] py-2.5 px-4 cursor-pointer"
@@ -69,11 +77,14 @@ function selectLang(lang) {
         </ul>
       </div>
 
-      <button
-        class="py-[13px] px-[24px] button text-sm"
-      >
+      <button class="py-[13px] px-[24px] button text-sm tablet:block hidden desktop:block">
         Sign in for free
       </button>
+      <img
+        src="../assets/menu.svg"
+        alt="navigation"
+        class="desktop:hidden block w-6 h-6 cursor-pointer"
+      />
     </div>
   </nav>
 </template>
