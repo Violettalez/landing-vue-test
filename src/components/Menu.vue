@@ -4,6 +4,7 @@ import { ref } from 'vue'
 const langs = ['EN', 'UA']
 const currentLang = ref(langs[0])
 const isOpen = ref(false)
+const isOpenMenu = ref(false)
 
 function toggleLangSelection() {
   isOpen.value = !isOpen.value
@@ -83,8 +84,47 @@ function selectLang(lang) {
       <img
         src="../assets/menu.svg"
         alt="navigation"
+        @click="isOpenMenu = true"
         class="desktop:hidden block w-6 h-6 cursor-pointer"
       />
     </div>
+    <transition
+      enter-active-class="transition-transform duration-300"
+      leave-active-class="transition-transform duration-300"
+      enter-from-class="-translate-x-full"
+      enter-to-class="translate-x-0"
+      leave-from-class="translate-x-0"
+      leave-to-class="-translate-x-full"
+    >
+      <div class="absolute top-0 left-0 w-full h-full" v-if="isOpenMenu">
+        <div
+          class="bg-white tablet:w-1/3 mobile:w-2/3 h-full p-10 flex flex-col gap-10 relative shadow-2xl"
+        >
+          <div class="absolute top-5 right-5 cursor-pointer" @click="isOpenMenu = false">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <ul class="flex flex-col gap-8 *:font-museo *:font-bold *:text-[15px] *:text-gray">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Instractions</a></li>
+            <li><a href="#">Accounts</a></li>
+            <li><a href="#">Platforms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <button class="py-[13px] px-[24px] button text-sm w-max mobile:block tablet:hidden">
+            Sign in for free
+          </button>
+        </div>
+      </div>
+    </transition>
   </nav>
 </template>
