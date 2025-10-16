@@ -26,15 +26,17 @@ const intructions = [
 ]
 </script>
 <template>
-  <div class="pt-25 pl-[120px] pr-[222px]">
-    <h2 class="leading-[66px] font-museo font-medium text-[56px] w-[40%] mb-[113px]">
+  <div class="desktop:pt-25 tablet:pt-30 mobile:pt-20 desktop:pl-[120px] desktop:pr-[222px] tablet:px-10 mobile:px-5">
+    <h2
+      class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-[60%] desktop:mb-[113px] tablet:mb-[111px] mobile:mb-10"
+    >
       Getting Started Is <span class="bg-violet-bg/10 pb-2">Fast & Easy</span>
     </h2>
-    <div class="relative flex flex-col">
+    <div class="relative flex flex-col desktop:gap-0 tablet:gap-0 mobile:gap-6">
       <div
         v-for="instruction in intructions"
         :key="instruction.id"
-        :class="` z-2 w-[483px] border-2 p-8 rounded-[30px] bg-white border-violet-bg font-medium mb-2 text-[15px] ${instruction.id % 2 === 0 ? 'self-end' : 'self-start'} mt-[-53px]`"
+        :class="` z-2 desktop:w-[483px] tablet:w-[329px] mobile:w-full border-2 p-8 rounded-[30px] bg-white border-violet-bg font-medium text-[15px] ${instruction.id % 2 === 0 ? 'desktop:self-end tablet:self-end' : 'desktop:self-start tablet:self-start'} desktop:mt-[-53px] tablet:mt-[-55px] mobile:mt-0 relative `"
       >
         <p class="font-museo text-violet-bg">0{{ instruction.id }}.</p>
         <h2 class="font-museo text-2xl font-medium mb-6">{{ instruction.title }}</h2>
@@ -43,7 +45,7 @@ const intructions = [
         </p>
       </div>
       <div
-        class="absolute top-0 left-1/5 w-[60%] *:h-[200px] *:rounded-[30px] *:border-dotted *:border-violet-bg"
+        class="absolute top-10 left-1/5 w-[60%] desktop:*:h-[170px] tablet:*:h-50 *:rounded-[30px] *:border-dotted *:border-violet-bg desktop:block tablet:block mobile:hidden"
       >
         <div class="border-t-3 border-r-3"></div>
         <div class="border-t-3 border-l-3"></div>
