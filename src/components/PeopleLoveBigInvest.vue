@@ -50,16 +50,24 @@ function prevQuote() {
 }
 </script>
 <template>
-  <section class="flex px-30 py-40 gap-21">
-    <div class="flex flex-col gap-[47px]">
-      <h2 class="leading-[66px] font-museo font-medium text-[56px]">
+  <section
+    class="flex desktop:flex-row desktop:justify-between tablet:flex-col mobile:flex-col desktop:px-30 desktop:py-35 tablet:py-30 tablet:px-10 mobile:py-20 mobile:px-5 desktop:gap-21 tablet:gap-12 mobile:gap-8"
+  >
+    <div class="desktop:flex desktop:flex-col desktop:gap-[47px]">
+      <h2
+        class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[483px] tablet:w-[80%] mobile:w-full text-gray"
+      >
         People love Big
         <span class="bg-violet-bg/10 pb-2"
-          >Invest <span class="text-violet-bg/0">Invest</span></span
+          >Invest<span class="text-violet-bg/0 mobile:hidden tablet:hidden desktop:inline"
+            >Investt</span
+          ><span class="text-violet-bg/0 mobile:inline tablet:hidden desktop:hidden"
+            >Inv</span
+          ></span
         >
       </h2>
       <div
-        class="*:rounded-full *:w-12 *:h-12 *:border-[1px] *:border-gray-light *:hover:border-violet-bg *:flex *:items-center *:justify-center flex gap-4"
+        class="*:rounded-full *:w-12 *:h-12 *:border-[1px] *:border-gray-light *:hover:border-violet-bg *:flex *:items-center *:justify-center desktop:flex hidden gap-4"
       >
         <div @click="prevQuote">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -79,28 +87,95 @@ function prevQuote() {
         </div>
       </div>
     </div>
-    <div
-      v-for="quote in quotes"
-      :key="quote.id"
-      :class="`w-[80%] mt-10 flex flex-col gap-[17px] ${choosedQuote.id === quote.id ? 'block' : 'hidden'}`"
-    >
-      <div class="flex items-center gap-[30px] ml-12">
-        <img :src="quote.image" :alt="quote.name" class="rounded-full w-[73px]" />
-        <div class="flex flex-col">
-          <p class="font-museo text-lg leading-[30px] font-bold text-gray">{{ quote.name }}</p>
-          <p class="font-montserrat text-base leading-[27px] font-normal text-gray-text">
-            {{ quote.position }}
-          </p>
+    <div class="desktop:flex tablet:flex mobile:block tablet:items-center tablet:gap-[42px]">
+      <div
+        @click="prevQuote"
+        class="rounded-full w-12 h-12 border-[1px] border-gray-light hover:border-violet-bg items-center justify-center desktop:hidden tablet:flex mobile:hidden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="m10.828 12l4.95 4.95l-1.414 1.415L8 12l6.364-6.364l1.414 1.414z"
+          />
+        </svg>
+      </div>
+      <div
+        v-for="quote in quotes"
+        :key="quote.id"
+        :class="`desktop:w-auto tablet:w-[70%] mobile:w-full mt-10 flex flex-col gap-[17px] ${choosedQuote.id === quote.id ? 'block' : 'hidden'}`"
+      >
+        <div
+          class="flex desktop:flex-row flex-col items-center desktop:gap-[30px] tablet:gap-[10px] mobile:gap-2 desktop:ml-12"
+        >
+          <img :src="quote.image" :alt="quote.name" class="rounded-full w-[73px]" />
+          <div class="flex flex-col">
+            <p
+              class="font-museo text-lg leading-[30px] font-bold text-gray desktop:text-start text-center"
+            >
+              {{ quote.name }}
+            </p>
+            <p
+              class="font-montserrat text-base leading-[27px] font-normal text-gray-text desktop:text-start text-center"
+            >
+              {{ quote.position }}
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-[15px] flex-grow">
+          <img src="../assets/quote.svg" alt="quote" class="desktop:block hidden" />
+          <div class="flex flex-col items-center desktop:gap-[31px] gap-4">
+            <img
+              src="../assets/quote.svg"
+              alt="quote"
+              class="w-[33px] h-[27px] desktop:hidden block"
+            />
+            <p class="font-museo font-bold text-2xl text-gray desktop:text-start text-center">
+              {{ quote.quote }}
+            </p>
+            <div
+              class="desktop:block tablet:block mobile:flex mobile:justify-between mobile:w-full items-center"
+            >
+              <div
+                @click="prevQuote"
+                class="rounded-full w-12 h-12 border-[1px] border-gray-light hover:border-violet-bg items-center justify-center desktop:hidden tablet:hidden mobile:flex"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="m10.828 12l4.95 4.95l-1.414 1.415L8 12l6.364-6.364l1.414 1.414z"
+                  />
+                </svg>
+              </div>
+              <p
+                class="w-auto desktop:text-start tablet:text-center mobile:text-center font-museo font-bold text-[15px] text-violet-bg tablet:mb-4 desktop:mb-0 mobile:mb-0"
+              >
+                0{{ quote.id }} / 0{{ quotes.length }}
+              </p>
+              <div
+                @click="nextQuote"
+                class="rounded-full w-12 h-12 border-[1px] border-gray-light hover:border-violet-bg flex items-center justify-center desktop:hidden tablet:hidden mobile:flex"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="m13.172 12l-4.95-4.95l1.414-1.413L16 12l-6.364 6.364l-1.414-1.415z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex items-start gap-[15px] flex-grow">
-        <img src="../assets/quote.svg" alt="quote" />
-        <div class="flex flex-col gap-[31px]">
-          <p class="font-museo font-bold text-2xl text-gray">{{ quote.quote }}</p>
-          <p class="font-museo font-bold text-[15px] text-violet-bg">
-            0{{ quote.id }} / 0{{ quotes.length }}
-          </p>
-        </div>
+      <div
+        @click="nextQuote"
+        class="rounded-full w-12 h-12 border-[1px] border-gray-light hover:border-violet-bg flex items-center justify-center desktop:hidden tablet:flex mobile:hidden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="m13.172 12l-4.95-4.95l1.414-1.413L16 12l-6.364 6.364l-1.414-1.415z"
+          />
+        </svg>
       </div>
     </div>
   </section>
