@@ -46,29 +46,27 @@ const toggle = (id) => {
 }
 </script>
 <template>
-  <div class="px-[120px] mb-[140px]">
-    <h2 class="leading-[66px] font-museo font-medium text-[56px] w-[40%] mb-15">
+  <div class="desktop:px-[120px] tablet:px-10 mobile:px-5 desktop:mb-[140px] tablet:mb-30 mobile:mb-20">
+    <h2 class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-auto mobile:w-auto desktop:mb-15 tablet:mb-14 mobile:mb-8">
       Frequently asked <span class="bg-violet-bg/10 pb-2">questions</span>
     </h2>
-    <div class="flex flex-col gap-4 px-[102px]">
+    <div class="flex flex-col gap-4 desktop:px-[102px]">
       <div
         v-for="item in faqItems"
         :key="item.id"
-        class="border-2 py-[33.5px] px-10 rounded-[20px] bg-white border-violet-bg font-medium text-[15px]"
+        class="border-2 desktop:py-8 tablet:py-8 desktop:px-10 tablet:px-10 mobile:px-8 mobile:py-6 rounded-[20px] bg-white border-violet-bg font-medium text-[15px]"
       >
-        <div class="flex justify-between items-center">
-          <h3 class="font-museo text-2xl font-medium">{{ item.question }}</h3>
+        <div class="flex justify-between items-center desktop:gap-[133px] tablet:gap-[107px] mobile:gap-[27px]">
+          <p class="font-museo desktop:text-2xl tablet:text-2xl mobile:text-lg font-bold">{{ item.question }}</p>
           <Icon
             icon="ri:add-fill"
-            width="32"
-            height="32"
-            :class="`cursor-pointer ${isOpen === item.id ? 'rotate-45' : ''} transition`"
+            :class="`inline-block w-8 h-8 cursor-pointer ${isOpen === item.id ? 'rotate-45' : ''} transition`"
             @click="toggle(item.id)"
           />
         </div>
 
         <p
-          :class="`pr-[165px] mt-6 font-montserrat leading-[27px] font-normal text-[16px] text-gray-text ${isOpen === item.id ? 'block' : 'hidden'} transition`"
+          :class="`desktop:pr-[165px] tablet:pr-[50px] mobile:pr-2 mt-6 font-montserrat leading-[27px] font-normal text-base text-gray-text ${isOpen === item.id ? 'block' : 'hidden'} transition`"
         >
           {{ item.answer }}
         </p>
