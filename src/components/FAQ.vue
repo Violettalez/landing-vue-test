@@ -47,7 +47,7 @@ const toggle = (id) => {
 </script>
 <template>
   <div class="desktop:px-[120px] tablet:px-10 mobile:px-5 desktop:mb-[140px] tablet:mb-30 mobile:mb-20">
-    <h2 class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-auto mobile:w-auto desktop:mb-15 tablet:mb-14 mobile:mb-8">
+    <h2 class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-auto mobile:w-auto desktop:mb-15 tablet:mb-14 mobile:mb-8 text-gray">
       Frequently asked <span class="bg-violet-bg/10 pb-2">questions</span>
     </h2>
     <div class="flex flex-col gap-4 desktop:px-[102px]">
@@ -57,7 +57,7 @@ const toggle = (id) => {
         class="border-2 desktop:py-8 tablet:py-8 desktop:px-10 tablet:px-10 mobile:px-8 mobile:py-6 rounded-[20px] bg-white border-violet-bg font-medium text-[15px]"
       >
         <div class="flex justify-between items-center desktop:gap-[133px] tablet:gap-[107px] mobile:gap-[27px]">
-          <p class="font-museo desktop:text-2xl tablet:text-2xl mobile:text-lg font-bold">{{ item.question }}</p>
+          <p class="font-museo desktop:text-2xl tablet:text-2xl mobile:text-lg font-bold text-gray">{{ item.question }}</p>
           <Icon
             icon="ri:add-fill"
             :class="`inline-block w-8 h-8 cursor-pointer ${isOpen === item.id ? 'rotate-45' : ''} transition`"

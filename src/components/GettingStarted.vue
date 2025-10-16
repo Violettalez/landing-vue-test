@@ -28,7 +28,7 @@ const intructions = [
 <template>
   <div class="desktop:pt-25 tablet:pt-30 mobile:pt-20 desktop:pl-[120px] desktop:pr-[222px] tablet:px-10 mobile:px-5">
     <h2
-      class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-[60%] desktop:mb-[113px] tablet:mb-[111px] mobile:mb-10"
+      class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-[60%] desktop:mb-[113px] tablet:mb-[111px] mobile:mb-10 text-gray"
     >
       Getting Started Is <span class="bg-violet-bg/10 pb-2">Fast & Easy</span>
     </h2>
@@ -39,7 +39,7 @@ const intructions = [
         :class="` z-2 desktop:w-[483px] tablet:w-[329px] mobile:w-full border-2 p-8 rounded-[30px] bg-white border-violet-bg font-medium text-[15px] ${instruction.id % 2 === 0 ? 'desktop:self-end tablet:self-end' : 'desktop:self-start tablet:self-start'} desktop:mt-[-53px] tablet:mt-[-55px] mobile:mt-0 relative `"
       >
         <p class="font-museo text-violet-bg">0{{ instruction.id }}.</p>
-        <h2 class="font-museo text-2xl font-medium mb-6">{{ instruction.title }}</h2>
+        <h2 class="font-museo text-2xl font-medium mb-6 text-gray">{{ instruction.title }}</h2>
         <p class="font-montserrat leading-[30px] font-normal text-[18px] text-gray-text">
           {{ instruction.description }}
         </p>
