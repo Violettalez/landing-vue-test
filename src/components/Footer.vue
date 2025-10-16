@@ -1,10 +1,32 @@
 <script></script>
 <template>
-  <footer class="py-8 px-30">
-    <div class="flex justify-between items-start mb-12">
-      <h3 class="cursor-pointer font-museo font-bold text-[15px] text-gray mr-40 flex-1">LOGO</h3>
-      <div class="flex flex-col gap-4 mr-[30px] flex-3">
-        <h3 class="font-museo font-medium text-lg leading-[30px] text-gray">
+  <footer
+    class="py-8 desktop:px-30 tablet:pt-[62px] tablet:pb-12 tablet:px-10 mobile:px-5 mobile:pt-[46px] mobile:pb-8"
+  >
+    <div
+      class="flex desktop:flex-row tablet:flex-col mobile:flex-col justify-between mobile:items-start desktop:items-start tablet:items-center desctop:mb-12 tablet:mb-10 mobile:mb-8"
+    >
+      <h3
+        class="cursor-pointer font-museo font-bold text-[15px] text-gray desktop:mr-40 desktop:flex-1 desktop:text-start tablet:text-center mobile:text-center desktop:w-auto target:w-full mobile:w-full desktop:mb-0 tablet:mb-[54px] mobile:mb-[46px]"
+      >
+        LOGO
+      </h3>
+      <ul
+        class="w-full tablet:mb-10 mobile:mb-8 mobile:gap-8 *:font-museo *:font-bold *:text-[15px] *:text-gray leading-4 desktop:hidden tablet:flex mobile:flex tablet:flex-row mobile:flex-col tablet:justify-between tablet:items-center"
+      >
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Instractions</a></li>
+        <li><a href="#">Platforms</a></li>
+        <li><a href="#">Contacts Us</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign up for free</a></li>
+      </ul>
+      <div
+        class="flex flex-col gap-4 desktop:mr-[30px] desktop:flex-3 desktop:mb-0 tablet:mb-8 mobile:mb-6 desktop:px-0 tablet:px-[90px] mobile:px-0"
+      >
+        <h3
+          class="font-museo font-bold text-lg leading-[30px] text-gray desktop:text-start tablet:text-center mobile:text-start"
+        >
           Information and high risk warning:
         </h3>
         <p class="font-montserrat font-normal text-base leading-[27px] text-gray-text">
@@ -15,8 +37,14 @@
           tolerance.
         </p>
       </div>
-      <div class="flex flex-col gap-4 mr-[96px] flex-3">
-        <h3 class="font-museo font-medium text-lg leading-[30px] text-gray">Legal disclaimer:</h3>
+      <div
+        class="flex flex-col gap-4 desktop:mr-[96px] desktop:flex-3 desktop:px-0 tablet:px-[90px] mobile:px-0"
+      >
+        <h3
+          class="font-museo font-bold text-lg leading-[30px] text-gray desktop:text-start tablet:text-center mobile:text-start"
+        >
+          Legal disclaimer:
+        </h3>
         <p class="font-montserrat font-normal text-base leading-[27px] text-gray-text">
           Forex trading entails significant risks and is not appropriate for all investors. The
           possibility of incurring substantial losses should be taken into account. It is therefore
@@ -26,7 +54,7 @@
         </p>
       </div>
       <ul
-        class="flex flex-col gap-6 *:font-museo *:font-bold *:text-[15px] *:text-gray leading-4 flex-1"
+        class="flex-col gap-6 *:font-museo *:font-bold *:text-[15px] *:text-gray leading-4 flex-1 desktop:flex tablet:hidden mobile:hidden"
       >
         <li><a href="#">About us</a></li>
         <li><a href="#">Instractions</a></li>
@@ -36,12 +64,16 @@
         <li><a href="#">Sign up for free</a></li>
       </ul>
     </div>
-    <div class="flex justify-between items-center">
-      <p class="font-montserrat font-normal text-base leading-[27px] text-gray-dark">
+    <div
+      class="flex desktop:flex-row tablet:flex-col mobile:flex-col justify-between items-center desktop:gap-0 tablet:gap-4 mobile:gap-4"
+    >
+      <p
+        class="font-montserrat font-normal text-base leading-[27px] text-gray-dark desktop:text-start tablet:text-center mobile:text-center"
+      >
         Copyright 2020, All Right Reserved
       </p>
       <div
-        class="flex gap-[66px] *:font-montserrat *:font-normal *:text-base *:leading-[27px] *:text-gray-dark"
+        class="flex desktop:flex-row tablet:flex-col mobile:flex-col desktop:gap-[66px] tablet:gap-4 mobile:gap-4 *:font-montserrat *:font-normal *:text-base *:leading-[27px] *:text-gray-dark desktop:*:text-start tablet:*:text-center mobile:*:text-center"
       >
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy Policy</a>
