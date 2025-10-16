@@ -37,5 +37,5 @@
   @apply inline-block w-auto uppercase py-[20px] px-[64px] rounded-[60px] bg-[var(--color-violet)] text-[var(--color-white)] font-museo text-base transition hover:bg-[var(--color-violet-light)] active:bg-[var(--color-violet-dark)] disabled:cursor-not-allowed disabled:bg-[var(--color-gray-light)] disabled:text-[var(--color-gray-dark)];
 }
 @utility input {
-  @apply border-1 rounded-[3px] border-[var(--color-gray-light)] placeholder:text-[var(--color-gray-dark)] placeholder:font-montserrat placeholder:text-base placeholder:leading-[26px] px-4 py-[7px] focus:outline-none focus:border-[var(--color-gring-gray-dark)] font-montserrat font-normal text-base leading-[26px] text-[var(--color-gray-text)];
+  @apply border-1 rounded-[3px] border-gray-light placeholder:text-[var(--color-gray-dark)] placeholder:font-montserrat placeholder:text-base placeholder:leading-[26px] px-4 py-[7px] focus:outline-none focus:border-[var(--color-gring-gray-dark)] font-montserrat font-normal text-base leading-[26px] text-[var(--color-gray-text)];
 }

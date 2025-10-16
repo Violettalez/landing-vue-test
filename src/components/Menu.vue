@@ -26,7 +26,7 @@ function selectLang(lang) {
         LOGO
       </h1>
       <ul
-        class="desktop:flex hidden items-center gap-4 justify-between *:font-museo *:font-medium *:text-[15px] *:text-gray"
+        class="desktop:flex hidden items-center gap-8 justify-between *:font-museo *:font-bold *:text-[15px] *:text-gray"
       >
         <li><a href="#">How it works</a></li>
         <li><a href="#">About</a></li>
