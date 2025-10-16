@@ -96,7 +96,7 @@ function selectLang(lang) {
       leave-from-class="translate-x-0"
       leave-to-class="-translate-x-full"
     >
-      <div class="absolute top-0 left-0 w-full h-full" v-if="isOpenMenu">
+      <div class="fixed z-10 left-0 top-0 w-full h-full" v-if="isOpenMenu">
         <div
           class="bg-white tablet:w-1/3 mobile:w-2/3 h-full p-10 flex flex-col gap-10 relative shadow-2xl"
         >

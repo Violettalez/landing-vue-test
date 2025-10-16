@@ -47,7 +47,7 @@ const toggle = (id) => {
 </script>
 <template>
   <div class="desktop:px-[120px] tablet:px-10 mobile:px-5 desktop:mb-[140px] tablet:mb-30 mobile:mb-20">
-    <h2 class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-auto mobile:w-auto desktop:mb-15 tablet:mb-14 mobile:mb-8 text-gray">
+    <h2 class="desctop:leading-[66px] tablet:leading-[66px] mobile:leading-[44px] mobile:text-[40px] font-museo font-medium desktop:text-[56px] tablet:text-[56px] desktop:w-[40%] tablet:w-auto mobile:w-[70%] desktop:mb-15 tablet:mb-14 mobile:mb-8 text-gray">
       Frequently asked <span class="bg-violet-bg/10 pb-2">questions</span>
     </h2>
     <div class="flex flex-col gap-4 desktop:px-[102px]">

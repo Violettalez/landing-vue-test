@@ -55,7 +55,7 @@ function prevQuote() {
   >
     <div class="desktop:flex desktop:flex-col desktop:gap-[47px]">
       <h2
-        class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[483px] tablet:w-[80%] mobile:w-full text-gray"
+        class="desctop:leading-[66px] tablet:leading-[66px] mobile:leading-[44px] mobile:text-[40px] desktop:text-[56px] tablet:text-[56px] leading-[66px] font-museo font-medium text-[56px] desktop:w-[483px] tablet:w-[80%] mobile:w-[70%] text-gray"
       >
         People love Big
         <span class="bg-violet-bg/10 pb-2"

@@ -26,9 +26,11 @@ const intructions = [
 ]
 </script>
 <template>
-  <div class="desktop:pt-25 tablet:pt-30 mobile:pt-20 desktop:pl-[120px] desktop:pr-[222px] tablet:px-10 mobile:px-5">
+  <div
+    class="desktop:pt-25 tablet:pt-30 mobile:pt-20 desktop:pl-[120px] desktop:pr-[222px] tablet:px-10 mobile:px-5"
+  >
     <h2
-      class="leading-[66px] font-museo font-medium text-[56px] desktop:w-[40%] tablet:w-[60%] desktop:mb-[113px] tablet:mb-[111px] mobile:mb-10 text-gray"
+      class="desctop:leading-[66px] tablet:leading-[66px] mobile:leading-[44px] mobile:text-[40px] font-museo font-medium desktop:text-[56px] tablet:text-[56px]  desktop:w-[40%] tablet:w-[60%] mobile:w-[60%] desktop:mb-[113px] tablet:mb-[111px] mobile:mb-10 text-gray"
     >
       Getting Started Is <span class="bg-violet-bg/10 pb-2">Fast & Easy</span>
     </h2>

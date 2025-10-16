@@ -94,7 +94,7 @@ const validateForm = () => {
   >
     <div class="desktop:w-[34%] tablet:w-full mobile:w-full">
       <h2
-        class="font-museo font-bold text-[56px] leading-[66px] desktop:text-start tablet:text-center mobile:text-start text-gray mb-8"
+        class="desctop:leading-[66px] tablet:leading-[66px] mobile:leading-[44px] mobile:text-[40px] font-museo font-medium desktop:text-[56px] tablet:text-[56px] desktop:text-start tablet:text-center mobile:text-start text-gray mb-8"
       >
         Contact us!
       </h2>
