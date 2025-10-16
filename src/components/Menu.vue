@@ -21,7 +21,7 @@ function selectLang(lang) {
   >
     <div class="flex gap-14.25 items-center desktop:ml-15">
       <h1
-        class="desktop:block tablet:hidden mobile:block cursor-pointer font-museo font-bold text-[15px] text-gray"
+        class="desktop:block tablet:hidden mobile:block cursor-pointer font-museo font-extrabold text-[15px] text-gray"
       >
         LOGO
       </h1>
